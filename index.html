@@ -3,100 +3,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CLAYNEST</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/adapt.css">
 </head>
 <body>
 
-    <!-- Секція: популярні -->
-    <section class="favorites">
-
-        <!-- Заголовок -->
-        <div class="favorites-header">
-            <h2></h2>
-            <p></p>
+    <section class="screen-hero" id="hero">
+      <div class="container">
+        <header>
+          <div class="logo"><img src="images/frame1/claaynest 1.png" alt=""></div>
+          <div class="search">
+            <img src="images/frame1/search.png" class="search-icon" alt="">
+            <p class="search-p">Пошук..</p>
+          </div>
+          <div class="nav-icons">
+            <img src="images/frame1/bag.png" alt="">
+            <img src="images/frame1/user.png" alt="">
+            <img src="images/frame1/menu.png" alt="" onclick="togglemenu()" class="nav_pop-up_menu">
+          </div>
+        </header>
+        <div id="menu" class="nav_pop-up_menu">
+          <a href="#hero" class="menu-item">Головна</a>
+          <a href="#favorites" class="menu-item">Наші улюблені</a>
+          <a href="#style" class="menu-item">Стилі сервірування</a>
+          <a href="#vidguc" class="menu-item">Відгуки</a>
+          <a href="#contacts" class="menu-item">Контакти</a>
         </div>
 
-        <!-- Блок з товарами -->
-        <div class="products-wrapper">
+      <div class="hero-content">
+        <h1 class="hero-title">ПОСУД РУЧНОЇ РОБОТИ ВИГОТОВЛЕНИЙ ДЛЯ КОЖНОЇ СТРАВИ</h1>
+        <p class="hero-desc">Екологічно чистий посуд ручної роботи, який поєднує сталий розвиток з позачасовим дизайном, роблячи кожну трапезу незабутнім та елегантним досвідом.</p>
+        <div class="hero-buttons">
+          <button class="buy">Купити</button>
+          <button class="our-history">Наша історія</button>
+        </div>
+      </div>
 
-            <!-- Стрілка вліво -->
-            <button class="arrow-left"></button>
-
-            <!-- Список товарів -->
-            <div class="products">
-
-                <!-- Картка товару -->
-                <div class="card">
-
-                    <!-- Картинка -->
-                    <div class="card-image">
-                        <img>
-                    </div>
-
-                    <!-- Інформація -->
-                    <div class="card-info">
-
-                        <!-- Назва + ціна -->
-                        <div class="card-top">
-                            <p class="product-name"></p>
-                            <p class="price"></p>
-                        </div>
-
-                        <!-- Рейтинг -->
-                        <div class="rating"></div>
-
-                        <!-- Кольори + іконка -->
-                        <div class="card-bottom">
-                            <div class="colors"></div>
-                            <div class="icon"></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- ще картки... -->
-
+      <div class="popular-inner">
+        <div class="popular-label">
+          <h2>Популярні товари</h2>
+          <hr>
+          <p>Популярні товари 2025</p>
+        </div>
+        <div class="popular-grid">
+              <div class="product-card-pc1"><img src="images/frame1/product1.png" alt=""></div>
+              <div class="product-card-pc2"><img src="images/frame1/product2.png" alt=""></div>
+              <div class="product-card-pc3"><img src="images/frame1/product3.png" alt=""></div>
+              <div class="product-card-pc4"><img src="images/frame1/product4.png" alt=""></div>
             </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Стрілка вправо -->
-            <button class="arrow-right"></button>
+  <section class="screen-favorites" id="favorites">
+    <div class="container">
+      <h2 class="section-title">НАШІ УЛЮБЛЕНІ</h2>
+      <p class="section-desc">Відкрийте для себе наші бестселери, виготовлені з турботою та розроблені для того, щоб покращити ваші враження від вечері.</p>
 
-        </div>
-    </section>
+      <div class="favorites-slider-wrapper">
+        <button class="slider-btn" id="fav-prev">&#8249;</button>
+        <div class="favorites-grid" id="fav-grid">
 
-    <!-- Секція: історія -->
-    <section class="story">
-
-        <!-- Картинка -->
-        <div class="story-image">
-            <img>
-        </div>
-
-        <!-- Текст -->
-        <div class="story-content">
-
-            <h2></h2>
-
-            <p></p>
-
-            <!-- Посилання -->
-            <a class="more"></a>
-
-            <!-- Теги -->
-            <div class="tags">
-                <span></span>
-                <span></span>
-                <span></span>
+          <div class="product-card-big">
+            <div class="product-card-big__img"><img src="images/frame2/lopatka.webp" alt=""></div>
+            <div class="product-card-big__info">
+              <span class="product-name">Лопатка Tefal Comfort</span>
+              <span>$30.00</span>
             </div>
+            <div class="product-card-big__meta">
+              <div class="product-rating">
+                <span class="star">★</span>
+                <span class="rating-num">4.5</span>
+                <span>(138 Відгуки)</span>
+              </div>
+              <button class="cart-btn"><img src="images/frame1/bag.png" alt=""></button>
+            </div>
+            <ul class="product-colors">
+              <li class="color-dot" style="background:#B356AC;"></li>
+              <li class="color-dot" style="background:#4EB0BA;"></li>
+              <li class="color-dot" style="background:#000;"></li>
+              <li class="color-dot" style="background:#48AF4A;"></li>
+            </ul>
+          </div>
+
+          <div class="product-card-big">
+            <div class="product-card-big__img"><img src="images/frame2/tarilka.jpg" alt=""></div>
+            <div class="product-card-big__info">
+              <span class="product-name">Біла рифлена тарілка Darley Abbey</span>
+              <span>$30.00</span>
+            </div>
+            <div class="product-card-big__meta">
+              <div class="product-rating">
+                <span class="star">★</span>
+                <span class="rating-num">4.5</span>
+                <span>(138 Відгуки)</span>
+              </div>
+              <button class="cart-btn"><img src="images/frame1/bag.png" alt=""></button>
+            </div>
+            <ul class="product-colors">
+              <li class="color-dot" style="background:#B356AC;"></li>
+              <li class="color-dot" style="background:#4EB0BA;"></li>
+              <li class="color-dot" style="background:#000;"></li>
+              <li class="color-dot" style="background:#48AF4A;"></li>
+            </ul>
+          </div>
+
+          <div class="product-card-big">
+            <div class="product-card-big__img"><img src="images/frame2/bokal.webp" alt=""></div>
+            <div class="product-card-big__info">
+              <span class="product-name">Келихи для вина Bordeaux Durabl</span>
+              <span>$30.00</span>
+            </div>
+            <div class="product-card-big__meta">
+              <div class="product-rating">
+                <span class="star">★</span>
+                <span class="rating-num">4.5</span>
+                <span>(138 Відгуки)</span>
+              </div>
+              <button class="cart-btn"><img src="images/frame1/bag.png" alt=""></button>
+            </div>
+            <ul class="product-colors">
+              <li class="color-dot" style="background:#fff;"></li>
+              <li class="color-dot" style="background:#fff;"></li>
+              <li class="color-dot" style="background:#fff;"></li>
+              <li class="color-dot" style="background:#fff;"></li>
+            </ul>
+          </div>
 
         </div>
+        <button class="slider-btn" id="fav-next">&#8250;</button>
+      </div>
+    </div>
 
-    </section>
+    <div class="benefits">
+      <div class="benefits-img"><img src="images/frame2/tea.jpg" alt=""></div>
+      <div class="benefits-content">
+        <h2 class="benefits-title">РУЧНА РОБОТА ДЛЯ ВАШОГО СТОЛУ</h2>
+        <p class="benefits-text">Кожен виріб у нашій колекції з любов'ю виготовлений вручну досвідченими майстрами, які вдосконалювали свою майстерність протягом поколінь. Використовуючи екологічно чисті матеріали та перевірені часом методи, ми створюємо посуд, який не лише служить вашим столом, а й розповідає історію традицій та турботи.</p>
+        <div class="benefits-link"> <a href="#" class="benefits-more">Більше</a>
+        <img class="benefits-str" src="images/frame2/Arrow 1.svg" alt="">
+        </div>
+        <ul class="benefits-tags">
+          <li class="tag">Створено з турботою</li>
+          <li class="tag">Натхненний природою</li>
+          <li class="tag">Зроблено вручну</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<script src="js/main.js"></script>
+  <section class="screen-styles" id="style">
+    <div class="container">
+      <h2 class="section-title">СТИЛІ СЕРВІРУВАННЯ</h2>
+      <p class="section-desc">Дізнайтесь, як наш посуд перетворює звичайні моменти на надзвичайні враження.</p>
+      <div class="styles-grid">
+        <div class="style-card"><img src="images/frame3/style1.jpg" alt=""><div class="style-card__overlay">РАНКОВА ЕЛЕГАНТНІСТЬ</div></div>
+        <div class="style-card"><img src="images/frame3/style2.jpg" alt=""><div class="style-card__overlay">ЩОДЕННА КРАСА</div></div>
+        <div class="style-card"><img src="images/frame3/style3.jpg" alt=""><div class="style-card__overlay">РОЗВАЖАЛЬНИЙ СТИЛЬ JN</div></div>
+        <div class="style-card"><img src="images/frame3/style4.jpg" alt=""><div class="style-card__overlay">ЇЖА НА ВІДКРИТОМУ ПОВІТРІ</div></div>
+        <div class="style-card"><img src="images/frame3/style5.jpg" alt=""><div class="style-card__overlay">ІДЕАЛЬНІ МОМЕНТИ</div></div>
+        <div class="style-card"><img src="images/frame3/style6.jpg" alt=""><div class="style-card__overlay">КОМФОРТ &amp; РОБОТА</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen-testimonials" id="vidguc">
+    <div class="container">
+      <h2 class="section-title">ЩО КАЖУТЬ НАШІ КЛІЄНТИ</h2>
+      <p class="section-desc">Приєднуйтесь до тисяч задоволених клієнтів, які зробили наш посуд частиною своїх щоденних ритуалів.</p>
+
+      <div class="testimonials-slider-wrapper">
+        <button class="slider-btn" id="test-prev">&#8249;</button>
+        <div class="testimonials-grid" id="test-grid">
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__top"></div>
+            <div class="avatars"><img src="images/frame4/avatar1.jpg" alt=""></div>
+            <div class="testimonial-card__body">
+              <h3>ОЛЬГА МЕЛЬНИК</h3>
+              <p class="testimonial-city">КИЇВ</p>
+              <p class="testimonial-text">«Ці речі змінили мій досвід обіду. Якість та майстерність просто неперевершені»</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__top"></div>
+            <div class="avatars"><img src="images/frame4/avatar2.jpg" alt=""></div>
+            <div class="testimonial-card__body">
+              <h3>МИКОЛА ШЕВЧЕНКО</h3>
+              <p class="testimonial-city">КИЇВ</p>
+              <p class="testimonial-text">«Ці речі змінили мій досвід обіду. Якість та майстерність просто неперевершені»</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__top"></div>
+            <div class="avatars"><img src="images/frame4/avatar3.jpg" alt=""></div>
+            <div class="testimonial-card__body">
+              <h3>ЛЮДМИЛА КОВАЛЬ</h3>
+              <p class="testimonial-city">КИЇВ</p>
+              <p class="testimonial-text">«Ці речі змінили мій досвід обіду. Якість та майстерність просто неперевершені»</p>
+            </div>
+          </div>
+
+        </div>
+        <button class="slider-btn" id="test-next">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen-advantages">
+    <div class="container">
+      <div class="advantages-grid">
+        <div class="advantage-item">
+          <div class="advantage-icon"><img src="images/frame4/eco.png" alt=""></div>
+          <h3 class="advantage-title">ЕКОЛОГІЧНО ЧИСТІ МАТЕРІАЛИ</h3>
+          <p class="advantage-desc">Глина та натуральні глазурі з сталого джерела</p>
+        </div>
+
+        <div class="advantage-item">
+          <div class="advantage-icon"><img src="images/frame4/delivery.png" alt=""></div>
+          <h3 class="advantage-title">БЕЗКОШТОВНА ДОСТАВКА</h3>
+          <p class="advantage-desc">Скористайтеся доставкою по всьому світу для замовлень понад 50 доларів США</p>
+        </div>
+
+        <div class="advantage-item">
+          <div class="advantage-icon"><img src="images/frame4/handmade.png" alt=""></div>
+          <h3 class="advantage-title">РУЧНА РОБОТА</h3>
+          <p class="advantage-desc">Кожен виріб унікально виготовлений кваліфікованими майстрами</p>
+        </div>
+
+        <div class="advantage-item">
+          <div class="advantage-icon"><img src="images/frame4/dishwasher.png" alt=""></div>
+          <h3 class="advantage-title">МОЖНА МИТИ В ПОСУДОМИЙЦІ</h3>
+          <p class="advantage-desc">Посуд, що легко доглядає, створений для щоденного використання</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacts">
+    <div class="container">
+      <div class="styles-grid-footer">
+        <div class="footer-card"><img src="images/frame5/foto1.jpg" alt=""></div>
+        <div class="footer-card"><img src="images/frame5/foto2.jpg" alt=""></div>
+        <div class="footer-card"><img src="images/frame5/foto3.jpg" alt=""></div>
+        <div class="footer-card"><img src="images/frame5/foto4.jpg" alt=""></div>
+        <div class="footer-card"><img src="images/frame5/foto5.jpg" alt=""></div>
+      </div>
+
+      <div class="footer-line">
+        <div class="footer-links">
+          <p class="link-title">ПОСИЛАННЯ</p>
+          <a class="link-text" href="#">Купуйте Все</a>
+          <a class="link-text" href="#">Посуд</a>
+          <a class="link-text" href="#">Подавати Посуд</a>
+          <a class="link-text" href="#">Про Нас</a>
+          <a class="link-text" href="#">Контакти</a>
+        </div>
+
+        <div class="footer-links footer-links-service">
+          <p class="link-title">ОБСЛУГОВУВАННЯ КЛІЄНТІВ</p>
+          <a class="link-text" href="#">FAQ</a>
+          <a class="link-text" href="#">Повернення</a>
+          <a class="link-text" href="#">Про Доставку</a>
+          <a class="link-text" href="#">Довідник розмірів</a>
+          <a class="link-text" href="#">Інструкція</a>
+        </div>
+
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/frame1/claaynest 1.png" alt=""></div>
+          <p class="footer-text">Кераміка ручної роботи, яка перетворює повсякденні обіди на надзвичайні враження. Зроблено з любов'ю, створено для життя.</p>
+          <div class="footer-socials">
+            <a href="#"><img src="images/frame5/1x.png" alt=""></a>
+            <a href="#"><img src="images/frame5/2x.png" alt=""></a>
+            <a href="#"><img src="images/frame5/3x.png" alt=""></a>
+            <a href="#"><img src="images/frame5/4x.png" alt=""></a>
+          </div>
+        </div>
+
+        <div class="footer-subscribe">
+          <p class="link-title">ПІДПИШІТЬСЯ НА НАШУ РОЗСИЛКУ</p>
+          <p class="footer-small-text">Підпишіться, щоб дізнаватися про наші останні розпродажі, нові надходження тощо</p>
+          <form class="footer-form">
+            <button class="email">Введіть свою електронну адресу</button>
+            <button class="submit">Підписатися <span>→</span></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>@ 2025 Claynest, Всі права захищено,</p>
+        <div class="footer-bottom-links">
+          <a href="#">Політика Конфіденційності</a>
+          <a href="#">Умови обслуговування</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
