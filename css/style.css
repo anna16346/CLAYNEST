@@ -718,20 +718,18 @@ footer {
 .footer-socials {
   justify-content: center;
   display: flex;
-  gap: 10px;
+  gap:5px;
 }
 .footer-socials a {
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   align-items: center;
   justify-content: center;
   display: flex;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 50%;
 }
 .footer-socials img {
-  width: 30px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
 }
 .footer-subscribe {
   width: 360px;
