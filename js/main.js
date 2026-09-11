@@ -117,5 +117,5 @@ $(function() {
       header.removeClass("fixed");
     }
     console.log(scrollPos);
-  }
-}
+  });
+});
