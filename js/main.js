@@ -102,3 +102,20 @@ document.addEventListener('click', function(e) {
         menu.classList.remove("open_nav");
     }
 });
+$(function() {
+  let top = $("#top");
+  let topH = top.height();
+  let header = $("#header");
+  let scrollPos = $(window).scrollTop();
+  console.log(topH);
+
+  $(window).on("scroll load", function() {
+    scrollPos = $(this).scrollTop();
+    if (scrollPos > topH) {
+      header.addClass("fixed");
+    } else {
+      header.removeClass("fixed");
+    }
+    console.log(scrollPos);
+  }
+}
