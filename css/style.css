@@ -52,12 +52,33 @@ header {
   display: flex;
   margin: 0 auto;
 }
-.header.fixed {
+#header {
+  position: relative;
+  z-index: 100;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+#header.fixed {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  z-index: 100;
+  max-width: none;
+  margin: 0;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #767676;
+}
+.screen-hero .container {
+  position: relative;
+}
+.header-placeholder {
+  height: 75px;
+  display: none;
+}
+.header-placeholder.active {
+  display: block;
 }
 #menu {
   width: 250px;
@@ -67,7 +88,7 @@ header {
   gap: 10px;
   overflow: hidden;
   transition: max-height 0.5s, padding 0.5s;
-  z-index: 10;
+  z-index: 110;
   position: absolute;
   top: 80px;
   right: 140px;
@@ -496,7 +517,6 @@ header {
   padding: 75px 0;
   background: #F1F1E4;
 }
- 
 .styles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -505,7 +525,6 @@ header {
   max-width: 1230px;
   margin: 0 auto;
 }
- 
 .style-card {
   display: flex;
   flex-direction: column;
@@ -516,8 +535,6 @@ header {
   flex: unset;
   margin: 0 !important;
 }
- 
-/* Зображення займає весь простір крім overlay */
 .style-card img {
   flex: 1;
   width: 100%;
@@ -525,8 +542,6 @@ header {
   display: block;
   object-fit: cover;
 }
- 
-/* Overlay — просто нижній flex-елемент, без absolute */
 .style-card__overlay {
   flex-shrink: 0;
   width: 100%;
@@ -540,7 +555,91 @@ header {
   letter-spacing: 0.5px;
   position: static;
 }
- 
+/* Інтерактивна картка товару */
+.product-card-big {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.product-card-big:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.product-card-big__img {
+  transition: transform 0.4s ease;
+}
+
+.product-card-big:hover .product-card-big__img {
+  transform: scale(1.04);
+}
+
+/* Активний колір */
+.color-dot {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.color-dot:hover {
+  transform: scale(1.2);
+}
+
+.color-dot.active {
+  border-color: #2B4032;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #2B4032;
+  transform: scale(1.15);
+}
+
+/* Кнопка кошика */
+.cart-btn {
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-btn:hover {
+  background: #2B4032;
+  transform: scale(1.1);
+}
+
+.cart-btn:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.cart-btn.added {
+  background: #2B4032;
+  transform: scale(1.15);
+}
+
+.cart-btn.added img {
+  filter: brightness(0) invert(1);
+}
+
+/* Позиціонування кольорів і кнопки (якщо потрібно) */
+.product-card-big__meta {
+  position: relative;
+}
+
+.product-colors {
+  position: absolute;
+  left: 15px;
+  bottom: 23px;
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cart-btn {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+}
 .testimonial-card {
   display: grid;
   grid-template-columns: 3;
@@ -597,7 +696,6 @@ header {
   font-size: 18px;
   letter-spacing: 0.5px;
   font-weight: 500;
-}
 }
 .testimonial-city {
   margin: 0;
