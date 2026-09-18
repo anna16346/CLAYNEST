@@ -597,21 +597,6 @@ header {
   filter: brightness(0) invert(1);
 }
 
-/* Позиціонування кольорів і кнопки (якщо потрібно) */
-.product-card-big__meta {
-  position: relative;
-}
-
-.product-colors {
-  position: absolute;
-  left: 15px;
-  bottom: 23px;
-  display: flex;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
 .cart-btn {
   position: absolute;
