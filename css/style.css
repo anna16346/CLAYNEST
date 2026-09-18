@@ -53,19 +53,29 @@ header {
   margin: 0 auto;
 }
 #header {
-  position: relative;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #767676;
+  background: black;
+  margin: 0 auto;
+  max-width: 1285px;   /* як у .container */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;     /* якщо потрібно */
   z-index: 100;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
 #header.fixed {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  max-width: none;
+  max-width: 1285px;   /* фіксована ширина як у контейнера */
   margin: 0;
-  padding: 0 20px;
   background: rgba(0, 0, 0, 0.95);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid #767676;
@@ -555,17 +565,14 @@ header {
   letter-spacing: 0.5px;
   position: static;
 }
-
 .color-dot {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 2px solid transparent;
 }
-
 .color-dot:hover {
   transform: scale(1.2);
 }
-
 .color-dot.active {
   border-color: #2B4032;
   box-shadow: 0 0 0 2px white, 0 0 0 4px #2B4032;
@@ -578,26 +585,20 @@ header {
   align-items: center;
   justify-content: center;
 }
-
 .cart-btn:hover {
   background: #2B4032;
   transform: scale(1.1);
 }
-
 .cart-btn:hover img {
   filter: brightness(0) invert(1);
 }
-
 .cart-btn.added {
   background: #2B4032;
   transform: scale(1.15);
 }
-
 .cart-btn.added img {
   filter: brightness(0) invert(1);
 }
-
-
 .cart-btn {
   position: absolute;
   right: 15px;
