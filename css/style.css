@@ -60,10 +60,9 @@ header {
   border-bottom: 1px solid #767676;
   background: black;
   margin: 0 auto;
-  max-width: 1285px;   /* як у .container */
+  max-width: 1245px;   /* як у .container */
   width: 100%;
   box-sizing: border-box;
-  padding: 0 20px;     /* якщо потрібно */
   z-index: 100;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -74,7 +73,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1285px;   /* фіксована ширина як у контейнера */
+  max-width: 1245px;   /* фіксована ширина як у контейнера */
   margin: 0;
   background: rgba(0, 0, 0, 0.95);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
