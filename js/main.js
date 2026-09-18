@@ -122,27 +122,3 @@ $(function () {
   $(window).on("scroll load resize", checkScroll);
   checkScroll();
 });
-
-// ===== ІНТЕРАКТИВНІ КАРТКИ ТОВАРІВ =====
-document.querySelectorAll(".product-card-big").forEach((card) => {
-  // Hover-ефект уже в CSS, тут — клік по кольорах і кнопці кошика
-  const colorDots = card.querySelectorAll(".color-dot");
-  const cartBtn = card.querySelector(".cart-btn");
-
-  colorDots.forEach((dot) => {
-    dot.addEventListener("click", (e) => {
-      e.stopPropagation();
-      colorDots.forEach((d) => d.classList.remove("active"));
-      dot.classList.add("active");
-    });
-  });
-
-  if (cartBtn) {
-    cartBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      cartBtn.classList.add("added");
-      // Можна додати анімацію / toast
-      setTimeout(() => cartBtn.classList.remove("added"), 600);
-    });
-  }
-});
